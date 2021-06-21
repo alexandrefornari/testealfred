@@ -59,53 +59,56 @@ As rotas do projetos estão definidas no arquivo src/routes.js, e são as seguin
 
 Acessíveis pelo navegador:
 
-/users - retorna um json com todos os usuários
+/users - retorna um json com todos os usuários  
 /users/:id - retorna apenas um usuário com o id especificado ou null
 
-/company - retorna um json com todos as companhias
+/company - retorna um json com todos as companhias  
 /company/:id - retorna apenas uma companhia com o id especificado ou null
 
-/project - retorna um json com todos os projetos
-/project/:id - retorna apenas um projeto com o id especificado ou null
+/project - retorna um json com todos os projetos  
+/project/:id - retorna apenas um projeto com o id especificado ou null  
 /project/company/:id - retorna um array com todos os projetos da companhia especificada pelo id ou um array vazio
 
-/statement - retorna um json com todos os statements
-/statement/:id - retorna apenas um statement com o id especificado ou null
-/statement/project/:id - retorna um array com todos os statements do projeto especificado pelo id ou um array vazio
+/statement - retorna um json com todos os statements  
+/statement/:id - retorna apenas um statement com o id especificado ou null  
+/statement/project/:id - retorna um array com todos os statements do projeto especificado pelo id ou um array vazio  
 /statement/user/:id - retorna um array com todos os statements do usuário especificado pelo id ou um array vazio
 
 
 Acessíveis pelo metodo post (criação):
 
 /users - necessário um json com os dados do usuário, ex:
-{
+`{
     firstName: 'John',
     lastName: 'Doe',
     email: 'example@example.com',
-}
+}`
 
 /company - necessário um json com os dados da companhia, ex:
-{
+`{
     name: 'Minha companhia'
-}
+}`
 
 /project - necessário um json com os dados do projeto, incluindo um id válido de uma companhia, ex:
-{
+`{
     name: 'Meu projeto',
     companyId: 1
-}
+}`
 
 /statement - necessário um json com os dados do statement, incluindo um id válido de um projeto e um id válido de um usuário, ex:
-{
+`{
     userId: 1,
     projectId: 1,
     verb: 'ação executada',
     object: 'objeto da ação',
-}
+}`
 
 Acessíveis pelo metodo delete (destruição):
 
 /users/:id - apaga o usuário com o id especificado ou retorna um erro de usuário não encontrado
+
 /company/:id - apaga a companhia com o id especificado ou retorna um erro de companhia não encontrada
+
 /project/:id - apaga o projeto com o id especificado ou retorna um erro de projeto não encontrado
+
 /statement/:id - apaga o statement com o id especificado ou retorna um erro de statement não encontrado
