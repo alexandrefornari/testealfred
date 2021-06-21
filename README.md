@@ -77,31 +77,32 @@ Acessíveis pelo navegador:
 
 Acessíveis pelo metodo post (criação):
 
-/users - necessário um json com os dados do usuário, ex:
-`{
-    firstName: 'John',
-    lastName: 'Doe',
-    email: 'example@example.com',
+/users - necessário um json com os dados do usuário, ex:  
+`{  
+    firstName: 'John',  
+    lastName: 'Doe',  
+    email: 'example@example.com',  
 }`
 
-/company - necessário um json com os dados da companhia, ex:
-`{
-    name: 'Minha companhia'
+/company - necessário um json com os dados da companhia, ex:  
+`{  
+    name: 'Minha companhia'  
 }`
 
-/project - necessário um json com os dados do projeto, incluindo um id válido de uma companhia, ex:
-`{
-    name: 'Meu projeto',
-    companyId: 1
+/project - necessário um json com os dados do projeto, incluindo um id válido de uma companhia, ex:  
+`{  
+    name: 'Meu projeto',  
+    companyId: 1  
 }`
 
-/statement - necessário um json com os dados do statement, incluindo um id válido de um projeto e um id válido de um usuário, ex:
-`{
-    userId: 1,
-    projectId: 1,
-    verb: 'ação executada',
-    object: 'objeto da ação',
+/statement - necessário um json com os dados do statement, incluindo um id válido de um projeto e um id válido de um usuário, ex:  
+`{  
+    userId: 1,  
+    projectId: 1,  
+    verb: 'ação executada',  
+    object: 'objeto da ação',  
 }`
+
 
 Acessíveis pelo metodo delete (destruição):
 
